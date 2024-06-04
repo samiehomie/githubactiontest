@@ -1,0 +1,1 @@
+[![example workflow](https://github.com/samiehomie/githubactiontest/actions/workflows/learn-github-actions.yml/badge.svg)](https://github.com/samiehomie/githubactiontest/actions/workflows/learn-github-actions.yml)
