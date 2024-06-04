@@ -1,16 +1,16 @@
-name: learn-github-actions
-run-name: ${{ github.actor }} is learning GtiHub Actions
-on:
-  push:
-    branches: [main]
-  workflow_dispatch: 
+name: example workflow
+on: [push, workflow_dispatch]
 jobs:
-  check-bats-version:
+  checkout:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-      - run: npm install -g bats
-      - run: bats -v
+        - uses: actions/checkout@v3
+  process:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a one-line script
+        run: echo Hello, world!
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
